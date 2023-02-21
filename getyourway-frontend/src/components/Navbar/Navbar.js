@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../images/Sky.png"
 
 const Navbar = () => {
   return (
     <nav className="navbar">
+      <img src={logo} className='skylogo' width="70px"/>
       <h1>GetYourWay</h1>
       <div className="links">
         {/* 'Link' replaces '<a>' tags and 'to' replaces 'href' tages. when inspecting the page '<a>' & 'href' will still be shown' */}

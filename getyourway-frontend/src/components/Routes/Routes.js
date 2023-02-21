@@ -9,6 +9,7 @@ import KingsLanding from '../ShowMap/HOTD/KingsLanding';
 import DriftMark from'../ShowMap/HOTD/DriftMark';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './Routes.css';
+import { Footer } from '../Footer/Footer';
 
 
 const Pathway = () => {
