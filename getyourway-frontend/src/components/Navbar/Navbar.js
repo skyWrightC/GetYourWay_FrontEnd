@@ -7,11 +7,11 @@ const Navbar = () => {
       <h1>GetYourWay</h1>
       <div className="links">
         {/* 'Link' replaces '<a>' tags and 'to' replaces 'href' tages. when inspecting the page '<a>' & 'href' will still be shown' */}
-        <Link to="/">Dashboard</Link>
+        <Link to="/dashboard">Dashboard</Link>
         <Link to="/about">About us</Link>
         <Link to="/contact">Contact us</Link>
         <Link
-          to="/login"
+          to="/"
           style={{
             color: "white",
             backgroundColor: "#03C1C1",

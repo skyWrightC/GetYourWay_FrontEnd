@@ -1,10 +1,12 @@
-import NotFound from '../ErrorNotFound/ErrorNotFound';
+import NotFound from '../ErrorNotFound/ErrorNotFound'
 import Navbar from '../Navbar/Navbar';
-import Dashboard from '../Pages/Dashboard/Dashboard';
-import Login from '../Pages/Login/Login';
-import Contact from '../Pages/Contact/Contact';
-import About from '../Pages/About/About';
-import Register from '../Pages/Register/Register';
+import Dashboard from '../Dashboard/Dashboard';
+import Login from '../Login/Login';
+import Contact from '../Contact/Contact';
+import About from '../About/About';
+import Register from '../Register/Register';
+import KingsLanding from '../ShowMap/HOTD/KingsLanding';
+import DriftMark from'../ShowMap/HOTD/DriftMark';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './Routes.css';
 
@@ -16,10 +18,15 @@ const Pathway = () => {
 				<Navbar />
 				<div className="content">
 					<Routes>
-						<Route exact path="/" element={<Dashboard />}>
+						<Route exact path="/dashboard" element={<Dashboard />}>
 						</Route>
-						<Route exact path="/login" element={<Login />}>
+						<Route exact path="/" element={<Login />}>
 						</Route>
+						<Route exact path="/kingslanding" element={<KingsLanding />}>
+
+						</Route>
+						<Route exact path='/driftmark' element={<DriftMark />}>
+            			</Route>
 						<Route exact path='/register' element={<Register />}>
             			</Route>
 						<Route exact path="/contact" element={<Contact />}>

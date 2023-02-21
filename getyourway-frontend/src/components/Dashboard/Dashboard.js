@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+import MultiActionAreaCard from '../Cards/Cards'
 import './Dashboard.css'
 
 function Home() {
@@ -14,16 +15,21 @@ function Home() {
 }
 
 function Map() {
-  //center will load the map at co-ordinates shown
   const center = useMemo(() => ({ lat: 51, lng: -0.32 }), []);
+
 
   return (
     <div className="container">
-      <h1>Dashboard</h1>
-      <br></br>
       <div className='dashboard-nav'>
+      <h1>Dashboard</h1>
+      <br />
+      <h2>Sky Shows</h2>
+      <br />
+      <MultiActionAreaCard />
+      <br />
         <h2>Google Maps</h2>
       </div>
+      <br />
       <GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
         <Marker position={center} />
       </GoogleMap>
