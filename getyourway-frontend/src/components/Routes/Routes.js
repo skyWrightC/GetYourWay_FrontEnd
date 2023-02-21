@@ -1,10 +1,10 @@
 import NotFound from '../ErrorNotFound/ErrorNotFound';
 import Navbar from '../Navbar/Navbar';
-import Dashboard from '../../Pages/Dashboard/Dashboard';
-import Login from '../../Pages/Login/Login';
-import Contact from '../../Pages/Contact/Contact';
-import About from '../../Pages/About/About';
-import Register from '../../Pages/Register/Register';
+import Dashboard from '../Pages/Dashboard/Dashboard';
+import Login from '../Pages/Login/Login';
+import Contact from '../Pages/Contact/Contact';
+import About from '../Pages/About/About';
+import Register from '../Pages/Register/Register';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './Routes.css';
 
