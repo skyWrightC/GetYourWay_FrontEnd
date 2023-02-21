@@ -14,12 +14,27 @@ const Login = () => {
     setUser({...user, [event.target.name] : event.target.value})
   }
 
+  
+
+
+
+
+
   const login = () => {
-    fetch(SERVER_URL + 'login', {
+    console.log(user);
+    let jsonuser = JSON.stringify(user);
+    console.log(jsonuser) 
+  fetch(SERVER_URL + 'login', {
+      // mode: 'no-cors',
       method: 'POST',
+      headers: { "content-type": "application/json"},
       body: JSON.stringify(user)
+  
+    // fetch(SERVER_URL + 'login', {
+    //   method: 'POST',
+    //   body: JSON.stringify(user)
     })
-    .then(res => {
+    .then(res => {console.log(res)
       const jwtToken = res.headers.get('Authorization');
       if (jwtToken !== null) {
         sessionStorage.setItem("jwt", jwtToken);
