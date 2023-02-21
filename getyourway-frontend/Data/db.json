@@ -1,0 +1,22 @@
+{
+  "loginData": [
+    {
+      "fullname": "tribute",
+      "username": "tribute1",
+      "password": "password1234",
+      "id": 1
+    },
+    {
+      "username": "Corey",
+      "password": "Corey",
+      "fullname": "Corey",
+      "id": 2
+    },
+    {
+      "username": "CaptainCavalier",
+      "password": "password12345",
+      "fullname": "anthony",
+      "id": 3
+    }
+  ]
+}

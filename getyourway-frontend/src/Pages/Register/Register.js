@@ -6,6 +6,7 @@ const Register = () => {
     const [fullname, setFullname] = useState('');
     const [username, setUsername] = useState(''); //username and password is set to an empty string as it will be entered--
     const [password, setPassword] = useState(''); //--further down in the function.
+    const [matchPassword, setMatchPassword] = useState('');
     const [isPending, setIsPending] = useState(false); //set to false as we are only making the request when the form is submitted
     const navigate = useNavigate();
 
@@ -69,8 +70,8 @@ const Register = () => {
                   type="text"
                   placeholder="re-enter password"
                   required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={matchPassword}
+                  onChange={(e) => setMatchPassword(e.target.value)}
                   />
                   <p> Welcome <div className="welcome">{ fullname }</div> </p>
                   <br />
