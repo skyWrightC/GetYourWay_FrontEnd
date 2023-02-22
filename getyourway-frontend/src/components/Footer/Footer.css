@@ -1,0 +1,32 @@
+.footer {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+    position: static;
+    background-color: white;
+    width: 100vw;
+    border-top:2px solid #f2f2f2;
+    bottom: 0;
+    padding-top: 20px;
+  }
+  
+  .footer p{
+    color: rgb(4, 52, 134);
+    margin-left: 40px;
+  }
+  
+  .navbar .links {
+    margin-left: auto;
+  }
+  
+  .navbar a{
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+  }
+  
+  .navbar a:hover {
+    color: rgb(3, 193, 193);
+  }

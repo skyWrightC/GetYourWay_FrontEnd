@@ -1,12 +1,15 @@
-import NotFound from '../ErrorNotFound/ErrorNotFound';
+import NotFound from '../ErrorNotFound/ErrorNotFound'
 import Navbar from '../Navbar/Navbar';
-import Dashboard from '../../Pages/Dashboard/Dashboard';
-import Login from '../../Pages/Login/Login';
-import Contact from '../../Pages/Contact/Contact';
-import About from '../../Pages/About/About';
-import Register from '../../Pages/Register/Register';
+import Dashboard from '../Dashboard/Dashboard';
+import Login from '../Login/Login';
+import Contact from '../Contact/Contact';
+import About from '../About/About';
+import Register from '../Register/Register';
+import KingsLanding from '../SkyShows/HOTD/HOTD';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './Routes.css';
+import Thelastofus from '../SkyShows/TLOU/TLOU.js';
+import Thewhitelotus from '../SkyShows/TWL/TWL';
 
 
 const Pathway = () => {
@@ -16,9 +19,15 @@ const Pathway = () => {
 				<Navbar />
 				<div className="content">
 					<Routes>
-						<Route exact path="/" element={<Dashboard />}>
+						<Route exact path="/dashboard" element={<Dashboard />}>
 						</Route>
-						<Route exact path="/login" element={<Login />}>
+						<Route exact path="/" element={<Login />}>
+						</Route>
+						<Route exact path="/houseofthedragon" element={<KingsLanding />}>
+						</Route>
+						<Route exact path="/thelastofus" element={<Thelastofus />}>
+						</Route>
+						<Route exact path="/thewhitelotus" element={<Thewhitelotus />}>
 						</Route>
 						<Route exact path='/register' element={<Register />}>
             			</Route>

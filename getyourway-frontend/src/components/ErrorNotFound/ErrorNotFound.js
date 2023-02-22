@@ -10,7 +10,7 @@ const NotFound = () => {
             <h2>Sorry</h2>
             <p>That page cannot be found.</p>
             <div className="re-route">
-            <Link to="/">Click here to get back home!</Link>
+            <Link to="/dashboard">Click here to get back home!</Link>
             </div>
         </div>
      );

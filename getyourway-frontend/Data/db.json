@@ -1,0 +1,46 @@
+{
+  "loginData": [
+    {
+      "fullname": "tribute",
+      "username": "tribute1",
+      "password": "password1234",
+      "id": 1
+    },
+    {
+      "username": "Corey",
+      "password": "Corey",
+      "fullname": "Corey",
+      "id": 2
+    },
+    {
+      "username": "CaptainCavalier",
+      "password": "password12345",
+      "fullname": "anthony",
+      "id": 3
+    },
+    {
+      "fullname": {
+        "": "Corey1"
+      },
+      "username": {
+        "": "Corey1"
+      },
+      "password": {
+        "": "Corey1"
+      },
+      "id": 4
+    },
+    {
+      "fullname": "ant1",
+      "username": "ant2",
+      "password": "ant3",
+      "id": 5
+    },
+    {
+      "fullname": "ant1",
+      "username": "ant2",
+      "password": "ant3",
+      "id": 6
+    }
+  ]
+}

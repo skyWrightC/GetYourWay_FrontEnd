@@ -1,0 +1,67 @@
+* {
+    box-sizing: 100%;
+  }
+  
+  places-container {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 300px;
+  }
+  
+  .map-container {
+    max-width: 600px;
+    width: 100%;
+    height: 50vh;
+  }
+  
+  .combobox-input {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+
+  .Taorminacontainer {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    
+  }
+
+  .Taormina-article {
+    max-width: 300px;
+  }
+
+  .notocontainer {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    
+  }
+
+  .noto-article {
+    max-width: 300px;
+  }
+
+  .palcontainer {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    
+  }
+
+  .pal-article {
+    max-width: 300px;
+  }
+
+  h2 {
+    text-align: center;
+  }
