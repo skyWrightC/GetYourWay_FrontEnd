@@ -83,9 +83,13 @@ The Dragonpit exterior was filmed at St. George's Square, removing San Francisco
         <MarkerF position={pit} />
       </GoogleMap>
       <br />
+      <br />
+      <br />
       </div>
-    </div>
-  );
+      </div>
+      
+      );
+      
 }
 
 export default KingsLanding;
