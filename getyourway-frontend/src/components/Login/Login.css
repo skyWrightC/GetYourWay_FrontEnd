@@ -1,0 +1,46 @@
+.login {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .login label {
+    text-align: left;
+    display: block;
+  }
+  
+  .login h2 {
+    font-size: 20px;
+    color: rgb(193, 3, 3);
+    margin-bottom: 30px;
+  }
+  
+  .login input {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    display: block;
+  }
+  
+  .login button {
+    background:rgb(193, 3, 3);
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 2.5px;
+  }
+
+  .registerlink :hover {
+    color: rgb(4, 52, 134);
+  }
+
+  .welcome{
+    color: rgb(4, 52, 134);
+  }
+
+  .loginform{
+    align-items: center;
+  }
