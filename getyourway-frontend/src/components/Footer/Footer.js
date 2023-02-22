@@ -1,11 +1,12 @@
 import React from 'react'
+import './Footer.css'
 import logo from '../images/Sky.png'
 
 export const Footer = () => {
   return (
-    <footer>
-        <img src={logo} width="70px" />
-        &copy; GetYourWay 2018-
+    <footer className='footer'>
+        <img src={logo} width="70px" alt='Skylogo' />
+       <p>&copy; GetYourWay 2018-</p>
     </footer>
   )
 }

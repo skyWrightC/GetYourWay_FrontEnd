@@ -1,0 +1,27 @@
+.footer {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  
+  .footer p{
+    color: rgb(3, 193, 193);
+    margin-left: 40px;
+  }
+  
+  .navbar .links {
+    margin-left: auto;
+  }
+  
+  .navbar a{
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+  }
+  
+  .navbar a:hover {
+    color: rgb(3, 193, 193);
+  }

@@ -5,11 +5,9 @@ import Login from '../Login/Login';
 import Contact from '../Contact/Contact';
 import About from '../About/About';
 import Register from '../Register/Register';
-import KingsLanding from '../ShowMap/HOTD/KingsLanding';
-import DriftMark from'../ShowMap/HOTD/DriftMark';
+import KingsLanding from '../ShowMap/HOTD/HOTD';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './Routes.css';
-import { Footer } from '../Footer/Footer';
 
 
 const Pathway = () => {
@@ -24,10 +22,7 @@ const Pathway = () => {
 						<Route exact path="/" element={<Login />}>
 						</Route>
 						<Route exact path="/kingslanding" element={<KingsLanding />}>
-
 						</Route>
-						<Route exact path='/driftmark' element={<DriftMark />}>
-            			</Route>
 						<Route exact path='/register' element={<Register />}>
             			</Route>
 						<Route exact path="/contact" element={<Contact />}>

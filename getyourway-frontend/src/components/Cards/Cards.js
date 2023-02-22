@@ -15,7 +15,7 @@ export default function MultiActionAreaCard() {
             <CardMedia
               component="img"
               height="140"
-              image={require('../images/house_dragon.png')}
+              image={require('../images/HOTDsky.png')}
               alt="House of the Dragon"
             />
             <CardContent>
@@ -77,7 +77,7 @@ export default function MultiActionAreaCard() {
               <CardMedia
                 component="img"
                 height="140"
-                image={require('../images/white_lotus.png')}
+                image={require('../images/WLsky.png')}
                 alt="House of the Dragon"
               />
               <CardContent>

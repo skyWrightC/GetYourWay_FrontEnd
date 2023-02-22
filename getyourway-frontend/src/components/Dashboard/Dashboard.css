@@ -19,7 +19,7 @@ body {
   }
   
   .places-container {
-    position: absolute;
+    position: right;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -41,7 +41,7 @@ body {
     color: rgba(3, 193, 193);
 }
 
-h2 {
+  h2 {
   color: rgba(3, 193, 193);
 }
 

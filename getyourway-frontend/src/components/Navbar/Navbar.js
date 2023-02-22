@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../images/Sky.png"
+import logo from "../images/Sky.png";
+import header from '../images/Skyheader.png';
 
 const Navbar = () => {
   return (
+  <header>
+    <img src={header} className='skyHeader' alt='skyheader'/>
     <nav className="navbar">
-      <img src={logo} className='skylogo' width="70px"/>
+      <img src={logo} className='skylogo' width="70px" alt='sky logo'/>
       <h1>GetYourWay</h1>
       <div className="links">
         {/* 'Link' replaces '<a>' tags and 'to' replaces 'href' tages. when inspecting the page '<a>' & 'href' will still be shown' */}
@@ -24,6 +27,7 @@ const Navbar = () => {
         </Link>
       </div>
     </nav>
+  </header>
   );
 };
 

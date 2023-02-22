@@ -25,3 +25,8 @@
   .navbar a:hover {
     color: rgb(3, 193, 193);
   }
+
+  .skyHeader {
+    width: 100%;
+    height: 20px;
+  }
