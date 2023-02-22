@@ -19,9 +19,9 @@ const Pathway = () => {
 				<Navbar />
 				<div className="content">
 					<Routes>
-						<Route exact path="/dashboard" element={<Dashboard />}>
+					<Route exact path="/" element={<Login />}>
 						</Route>
-						<Route exact path="/" element={<Login />}>
+						<Route exact path="/dashboard" element={<Dashboard />}>
 						</Route>
 						<Route exact path="/houseofthedragon" element={<KingsLanding />}>
 						</Route>
