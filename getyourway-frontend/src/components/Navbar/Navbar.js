@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="links">
         {/* 'Link' replaces '<a>' tags and 'to' replaces 'href' tages. when inspecting the page '<a>' & 'href' will still be shown' */}
         <Link to="/dashboard">Dashboard</Link>
-        <Link to="/about">About us</Link>
+        <Link to="/Comingsoon">Coming Soon</Link>
         <Link to="/contact">Contact us</Link>
         <Link
           to="/"
