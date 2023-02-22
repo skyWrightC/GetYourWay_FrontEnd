@@ -11,7 +11,7 @@
   
   .login h2 {
     font-size: 20px;
-    color: rgb(3, 193, 193);
+    color: rgb(193, 3, 3);
     margin-bottom: 30px;
   }
   
@@ -24,7 +24,7 @@
   }
   
   .login button {
-    background:rgb(3, 193, 193);
+    background:rgb(193, 3, 3);
     color: #fff;
     border: 0;
     padding: 8px;
@@ -34,11 +34,11 @@
   }
 
   .registerlink :hover {
-    color: rgb(3, 193, 193);
+    color: rgb(4, 52, 134);
   }
 
   .welcome{
-    color: rgb(3, 193, 193);
+    color: rgb(4, 52, 134);
   }
 
   .loginform{

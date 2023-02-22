@@ -6,7 +6,9 @@ export const Footer = () => {
   return (
     <footer className='footer'>
         <img src={logo} width="70px" alt='Skylogo' />
-       <p>&copy; GetYourWay 2018-</p>
+       <p>&copy; GetYourWay 2023</p>
     </footer>
   )
 }
+
+export default Footer;

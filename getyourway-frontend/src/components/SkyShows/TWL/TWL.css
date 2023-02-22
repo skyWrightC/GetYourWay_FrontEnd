@@ -22,44 +22,46 @@
     padding: 0.5rem;
   }
 
-  .kingscontainer {
+
+  .Taorminacontainer {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    
   }
 
-  .dubrovnik-article {
+  .Taormina-article {
     max-width: 300px;
   }
 
-  .driftcontainer {
+  .notocontainer {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    
   }
 
-  .drift-article {
+  .noto-article {
     max-width: 300px;
   }
 
-  .pitcontainer {
+  .palcontainer {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    
   }
 
-  .pit-article {
+  .pal-article {
     max-width: 300px;
   }
 
   h2 {
     text-align: center;
   }
-
-  

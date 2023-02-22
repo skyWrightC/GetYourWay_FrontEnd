@@ -14,7 +14,7 @@ export default function MultiActionAreaCard() {
           <CardActionArea>
             <CardMedia
               component="img"
-              height="140"
+              height="240"
               image={require('../images/HOTDsky.png')}
               alt="House of the Dragon"
             />
@@ -23,19 +23,15 @@ export default function MultiActionAreaCard() {
                 House Of The Dragon
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                House of the dragon is a dragony film about dragons fighting dragons until there is no more dragons
+              Almost two centuries before the Long Night, Red Wedding, or the Battle of the Bastards, another massive conflict
+              wreaked havoc across Westeros. The first of many planned spin-offs of HBO’s
+              landmark series Game of Thrones goes back to an era when the Targaryens ruled the Seven Kingdoms and dragons were plentiful.
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button href='kingslanding' size="small" color="primary">
-              Visit Kings Landing!
-            </Button>
-            <Button href='dragonpit' size="small" color="primary">
-              Visit The Dragonpit
-            </Button>
-            <Button href='driftmark' size="small" color="primary">
-              Visit Driftmark
+            <Button href='houseofthedragon' size="large" color="primary">
+              Visit House Of The Dragon!
             </Button>
           </CardActions>
         </Card>
@@ -44,8 +40,8 @@ export default function MultiActionAreaCard() {
           <CardActionArea>
             <CardMedia
               component="img"
-              height="140"
-              image={require('../images/last_of_us.png')}
+              height="240"
+              image={require('../images/TLOUsky.png')}
               alt="The Last Of Us"
             />
             <CardContent>
@@ -53,30 +49,24 @@ export default function MultiActionAreaCard() {
                 The Last Of Us
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                the last of us is a zombie program about zombies eating people and turning them into zombies to eat more people to make more zombies
-                Click below to visit places the show was filmed!
+              After a global pandemic destroys civilization, a hardened survivor takes charge of a 14-year-old girl
+              who may be humanity’s last hope. Pedro Pascal and Bella Ramsey star as Joel and Ellie. 
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary">
-              Visit Edmonton, Canada
-            </Button>
-            <Button size="small" color="primary">
-              Visit Calgary, Canada
-            </Button>
-            <Button size="small" color="primary">
-              Visit Canmore, Waterton
+            <Button href='/thelastofus' size="large" color="primary">
+              Visit The Last Of Us
             </Button>
           </CardActions>
         </Card>
-        <br />
+        <br/>
         <div className='hotdcard'>
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
-                height="140"
+                height="240"
                 image={require('../images/WLsky.png')}
                 alt="House of the Dragon"
               />
@@ -85,24 +75,28 @@ export default function MultiActionAreaCard() {
                   The White Lotus
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  House of the dragon is a dragony film about dragons fighting dragons until there is no more dragons
+                The series details "a week in the life of vacationers as they relax and rejuvenate in paradise.
+                With each passing day, a darker complexity emerges in these picture-perfect travelers,
+                the hotel's cheerful employees, and the idyllic locale itself.
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Visit Kings Landing!
+              <Button href='/thewhitelotus' size="large" color="primary">
+                Visit The White Lotus!
               </Button>
-              <Button size="small" color="primary">
-                Visit The Dragonpit
-              </Button>
-              <Button size="small" color="primary">
-                Visit Driftmark
-              </Button>
-            </CardActions>
-          </Card>
+              </CardActions>
+            </Card>
+          
         </div>
       </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
+
 
     </>
   );

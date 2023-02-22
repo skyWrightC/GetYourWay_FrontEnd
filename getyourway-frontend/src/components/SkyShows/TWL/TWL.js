@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
-import "./GoogleMaps.css";
+import "./TWL.css";
 
-function KingsLanding() {
+function Thewhitelotus() {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "",
   });
@@ -13,18 +13,18 @@ function KingsLanding() {
 }
 
 function Map() {
-  const kings = useMemo(() => ({ lat: 42.6507, lng: 18.0944 }), []);
-  const drift = useMemo(() => ({ lat: 50.1172, lng: -5.4778 }), []);
-  const pit = useMemo(() => ({ lat: 39.4753, lng: -6.3724 }), []);
+  const DomenicoPalace = useMemo(() => ({ lat: 37.8498, lng: 15.2834 }), []);
+  const Noto = useMemo(() => ({ lat: 36.8924, lng: 15.0652 }), []);
+  const Pal = useMemo(() => ({ lat: 38.1157, lng: 13.3615 }), []);
 
   return (
-    <div className="HOTD-Maps">
-      <h2>Kings Landing - Dubrovnik, Croatia</h2>
-      <div className="kingscontainer">
-        
+    <div className="TWL-Maps">
+      <h2>San Domenico Palace, Taormina</h2>
+      <br />
+      <div className="Taorminacontainer">
         <br />
-          <article className="dubrovnik-article">
-          Dubrovnik (Croatian pronunciation: [dǔbroːʋniːk] (listen)),[2] is a
+          <article className="Taormina-article">
+          Dubrovnik is a
           city in southern Dalmatia, Croatia, by the Adriatic Sea. It was
           historically known as Ragusa (pronounced [raˈɡuza]; see notes on
           naming). It is one of the most prominent tourist destinations in the
@@ -34,25 +34,27 @@ function Map() {
           in recognition of its outstanding medieval architecture and fortified
           </article>
         <GoogleMap
-          zoom={13}
-          center={kings}
-          mapContainerClassName="map-container"
-        >
-          <MarkerF position={kings} />
+          zoom={8}
+          center={DomenicoPalace}
+          mapContainerClassName="map-container">
+          <MarkerF position={DomenicoPalace} />
         </GoogleMap>
         <br />
       </div>
-      <h2>Driftmark - St Michaels Mount, England</h2>
-      <div className="driftcontainer">
+      <br />
+      <br />
+      <br />
+      <h2>Noto, Sicily</h2>
+      <br />
+      <div className="notocontainer">
         <br />
         <GoogleMap
-          zoom={13}
-          center={drift}
-          mapContainerClassName="map-container"
-        >
-          <MarkerF position={drift} />
+          zoom={8}
+          center={Noto}
+          mapContainerClassName="map-container">
+          <MarkerF position={Noto} />
         </GoogleMap>
-        <article className="drift-article">
+        <article className="noto-article">
         At the edge of Kings Landing, there is a large body of water called Blackwater Bay. It houses Driftmark,
         a castle and home to House Velaryon. It previously featured in Game of Thrones during the Battle of the Blackwater. Lord Corlys Velaryon, also known as the Sea Snake, is a key character in House of the Dragon,
         sitting on the small council as Master of Ships.
@@ -62,9 +64,12 @@ function Map() {
           </article>
       </div>
       <br />
-      <h2>The DragonPit - Cáceres, Spain</h2>
-      <div className="pitcontainer">
-      <article className="pit-article">
+      <br />
+      <br />
+      <h2>Palermo, Italy</h2>
+      <br />
+      <div className="palcontainer">
+      <article className="pal-article">
       HBO returned to Cáceres in Spain to film scenes for House of The Dragon, after the filming location
        was previously used in Game of Thrones it stood in for the Lannister stronghold, King's Landing, in season 7.
 
@@ -73,12 +78,15 @@ function Map() {
 The Dragonpit exterior was filmed at St. George's Square, removing San Francisco Javier church digitally.
           </article>
         <br />
-        <GoogleMap zoom={13} center={pit} mapContainerClassName="map-container">
-          <MarkerF position={pit} />
-        </GoogleMap>
+      <GoogleMap 
+        zoom={8} 
+        center={Pal} 
+        mapContainerClassName="map-container">
+        <MarkerF position={Pal} />
+      </GoogleMap>
       </div>
     </div>
   );
 }
 
-export default KingsLanding;
+export default Thewhitelotus;

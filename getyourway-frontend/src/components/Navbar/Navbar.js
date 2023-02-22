@@ -19,8 +19,8 @@ const Navbar = () => {
           to="/"
           style={{
             color: "white",
-            backgroundColor: "#03C1C1",
-            borderRadius: "8px",
+            backgroundColor: "rgb(4, 52, 134)",
+            borderRadius: "6px",
           }}
         >
           Login/Signup

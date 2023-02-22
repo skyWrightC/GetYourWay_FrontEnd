@@ -29,7 +29,7 @@ const Register = () => {
 
     return (
         <div className='login'>
-            <h2>Login</h2>
+            <h2>Register</h2>
             {/* below will enact the function crated earlier with the same name */}
             <form onSubmit={handleSubmit}>
                 <label>Please enter your Fullname: </label>

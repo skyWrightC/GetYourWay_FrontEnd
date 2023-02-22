@@ -8,7 +8,7 @@
   }
   
   .navbar h1 {
-    color: rgb(3, 193, 193);
+    color: rgb(4, 52, 134);
     margin-left: 40px;
   }
   
@@ -23,7 +23,7 @@
   }
   
   .navbar a:hover {
-    color: rgb(3, 193, 193);
+    color: rgb(193, 3, 3);
   }
 
   .skyHeader {

@@ -5,9 +5,11 @@ import Login from '../Login/Login';
 import Contact from '../Contact/Contact';
 import About from '../About/About';
 import Register from '../Register/Register';
-import KingsLanding from '../ShowMap/HOTD/HOTD';
+import KingsLanding from '../SkyShows/HOTD/HOTD';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './Routes.css';
+import Thelastofus from '../SkyShows/TLOU/TLOU.js';
+import Thewhitelotus from '../SkyShows/TWL/TWL';
 
 
 const Pathway = () => {
@@ -21,7 +23,11 @@ const Pathway = () => {
 						</Route>
 						<Route exact path="/" element={<Login />}>
 						</Route>
-						<Route exact path="/kingslanding" element={<KingsLanding />}>
+						<Route exact path="/houseofthedragon" element={<KingsLanding />}>
+						</Route>
+						<Route exact path="/thelastofus" element={<Thelastofus />}>
+						</Route>
+						<Route exact path="/thewhitelotus" element={<Thewhitelotus />}>
 						</Route>
 						<Route exact path='/register' element={<Register />}>
             			</Route>
