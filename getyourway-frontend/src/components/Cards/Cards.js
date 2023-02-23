@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions,} from '@mui/material';
 import './Cards.css';
 
-export default function MultiActionAreaCard() {
+export default function Cards() {
   return (
     <>
       <div className='hotdcard' >

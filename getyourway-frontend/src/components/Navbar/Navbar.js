@@ -15,15 +15,15 @@ const Navbar = () => {
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/Comingsoon">Coming Soon</Link>
         <Link to="/contact">Contact us</Link>
-        <Link
-          to="/"
+        <Link className="loginbtn"
+          to="/logout"
           style={{
             color: "white",
             backgroundColor: "rgb(4, 52, 134)",
             borderRadius: "6px",
           }}
         >
-          Login/Signup
+          Logout
         </Link>
       </div>
     </nav>

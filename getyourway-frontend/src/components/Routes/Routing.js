@@ -12,14 +12,14 @@ import Thewhitelotus from '../SkyShows/TWL/TWL';
 import Comingsoon from '../Comingsoon/Comingsoon';
 
 
-const Pathway = () => {
+const Routing = () => {
 	return (
 		<Router>
 			<div className="app">
 				<Navbar />
 				<div className="content">
 					<Routes>
-					<Route exact path="/" element={<Login />}>
+						<Route exact path="/" element={<Login />}>
 						</Route>
 						<Route exact path="/dashboard" element={<Dashboard />}>
 						</Route>
