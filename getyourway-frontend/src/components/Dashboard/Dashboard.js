@@ -1,7 +1,7 @@
-import MultiActionAreaCard from '../Cards/Cards'
+import Cards from '../Cards/Cards'
 import './Dashboard.css'
 
-function Home() {
+function Dashboard() {
 
   return (
     <div className="container">
@@ -10,11 +10,11 @@ function Home() {
       <br />
       <h2>Sky Shows</h2>
       <br />
-      <MultiActionAreaCard />
+      <Cards />
       <br />
       </div>
     </div>
   );
 }
 
-export default Home
+export default Dashboard;

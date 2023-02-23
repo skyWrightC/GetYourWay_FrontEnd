@@ -1,21 +1,21 @@
 import { useMemo } from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import "./TLOU.css";
+import { Button, CardActions } from '@mui/material';
 
-function Thelastofus() {
+
+// }
+
+function TLOU() {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "",
   });
-
-  //if maps !isLoaded(hasnt loaded) return Loading... else return the Map function
-  if (!isLoaded) return <div>Loading...</div>;
-  return <Map />;
-}
-
-function Map() {
   const ed = useMemo(() => ({ lat: 53.5461, lng: 113.4937 }), []);
   const cal = useMemo(() => ({ lat: 50.1172, lng: 114.0719 }), []);
   const can = useMemo(() => ({ lat: 51.0899, lng: 115.3441 }), []);
+
+  if (!isLoaded) { return <div>Loading...</div>}
+  else {
 
   return (
     <div className="TLOU-Maps">
@@ -32,6 +32,15 @@ function Map() {
           County. Its total population is 42,615 (2011 census). In 1979, the
           city of Dubrovnik was added to the UNESCO list of World Heritage Sites
           in recognition of its outstanding medieval architecture and fortified
+
+
+          <div>
+          <CardActions>
+            <Button className="travellinks" size="large" color="primary">
+                Visit The This Location
+              </Button>
+          </CardActions>
+          </div>
           </article>
         <GoogleMap
           zoom={8}
@@ -61,6 +70,15 @@ function Map() {
         
         In reality, Driftmark is a medieval church dating back to the 12th century on St. Michael’s Mount,
         a rocky island housing a small community off the coast of Cornwall, linked to Marazion island by a tidal causeway.
+
+
+        <div>
+          <CardActions>
+            <Button className="travellinks" size="large" color="primary">
+                Visit The This Location
+              </Button>
+          </CardActions>
+          </div>
           </article>
       </div>
       <br />
@@ -76,6 +94,15 @@ function Map() {
        The scenes in the streets of King's Landing from episodes eight and nine, "The Lord of the Tides" and "The Green Council", were filmed in Cáceres.
 
 The Dragonpit exterior was filmed at St. George's Square, removing San Francisco Javier church digitally.
+
+
+<div>
+          <CardActions>
+            <Button className="travellinks" size="large" color="primary">
+                Visit The This Location
+              </Button>
+          </CardActions>
+          </div>
           </article>
         <br />
       <GoogleMap 
@@ -88,5 +115,6 @@ The Dragonpit exterior was filmed at St. George's Square, removing San Francisco
     </div>
   );
 }
+};
 
-export default Thelastofus;
+export default TLOU;
