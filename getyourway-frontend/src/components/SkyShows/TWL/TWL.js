@@ -3,20 +3,23 @@ import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import "./TWL.css";
 import { Button, CardActions } from '@mui/material';
 
-function Thewhitelotus() {
+
+
+  //if maps !isLoaded(hasnt loaded) return Loading... else return the Map function
+  // if (!isLoaded) return <div>Loading...</div>;
+  // return <Map />;
+// }
+
+function TWL() {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "",
   });
-
-  //if maps !isLoaded(hasnt loaded) return Loading... else return the Map function
-  if (!isLoaded) return <div>Loading...</div>;
-  return <Map />;
-}
-
-function Map() {
   const DomenicoPalace = useMemo(() => ({ lat: 37.8498, lng: 15.2834 }), []);
   const Noto = useMemo(() => ({ lat: 36.8924, lng: 15.0652 }), []);
   const Pal = useMemo(() => ({ lat: 38.1157, lng: 13.3615 }), []);
+
+  if (!isLoaded) { return <div>Loading...</div>}
+  else {
 
   return (
     <div className="TWL-Maps">
@@ -37,7 +40,7 @@ function Map() {
 
           <div>
           <CardActions>
-            <Button className="travellinks" href="" size="large" color="primary">
+            <Button className="travellinks" size="large" color="primary">
                 Visit The This Location
               </Button>
           </CardActions>
@@ -75,7 +78,7 @@ function Map() {
 
         <div>
           <CardActions>
-            <Button className="travellinks" href="" size="large" color="primary">
+            <Button className="travellinks" size="large" color="primary">
                 Visit The This Location
               </Button>
           </CardActions>
@@ -99,7 +102,7 @@ The Dragonpit exterior was filmed at St. George's Square, removing San Francisco
 
 <div>
           <CardActions>
-            <Button className="travellinks" href="" size="large" color="primary">
+            <Button className="travellinks" size="large" color="primary">
                 Visit The This Location
               </Button>
           </CardActions>
@@ -113,15 +116,9 @@ The Dragonpit exterior was filmed at St. George's Square, removing San Francisco
         <MarkerF position={Pal} />
       </GoogleMap>
       </div>
-      <div>
-          <CardActions>
-            <Button className="travellinks" href="" size="large" color="primary">
-                Visit The This Location
-              </Button>
-          </CardActions>
-          </div>
     </div>
   );
 }
+};
 
-export default Thewhitelotus;
+export default TWL;

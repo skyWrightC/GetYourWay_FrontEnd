@@ -3,20 +3,19 @@ import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import "./TLOU.css";
 import { Button, CardActions } from '@mui/material';
 
-function Thelastofus() {
+
+// }
+
+function TLOU() {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "",
   });
-
-  //if maps !isLoaded(hasnt loaded) return Loading... else return the Map function
-  if (!isLoaded) return <div>Loading...</div>;
-  return <Map />;
-}
-
-function Map() {
   const ed = useMemo(() => ({ lat: 53.5461, lng: 113.4937 }), []);
   const cal = useMemo(() => ({ lat: 50.1172, lng: 114.0719 }), []);
   const can = useMemo(() => ({ lat: 51.0899, lng: 115.3441 }), []);
+
+  if (!isLoaded) { return <div>Loading...</div>}
+  else {
 
   return (
     <div className="TLOU-Maps">
@@ -37,7 +36,7 @@ function Map() {
 
           <div>
           <CardActions>
-            <Button className="travellinks" href="" size="large" color="primary">
+            <Button className="travellinks" size="large" color="primary">
                 Visit The This Location
               </Button>
           </CardActions>
@@ -75,7 +74,7 @@ function Map() {
 
         <div>
           <CardActions>
-            <Button className="travellinks" href="" size="large" color="primary">
+            <Button className="travellinks" size="large" color="primary">
                 Visit The This Location
               </Button>
           </CardActions>
@@ -99,7 +98,7 @@ The Dragonpit exterior was filmed at St. George's Square, removing San Francisco
 
 <div>
           <CardActions>
-            <Button className="travellinks" href="" size="large" color="primary">
+            <Button className="travellinks" size="large" color="primary">
                 Visit The This Location
               </Button>
           </CardActions>
@@ -116,5 +115,6 @@ The Dragonpit exterior was filmed at St. George's Square, removing San Francisco
     </div>
   );
 }
+};
 
-export default Thelastofus;
+export default TLOU;
