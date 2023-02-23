@@ -4,12 +4,13 @@ import Dashboard from '../Dashboard/Dashboard';
 import Login from '../Login/Login';
 import Contact from '../Contact/Contact';
 import Register from '../Register/Register';
-import KingsLanding from '../SkyShows/HOTD/HOTD';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import './Routes.css';
-import Thelastofus from '../SkyShows/TLOU/TLOU.js';
-import Thewhitelotus from '../SkyShows/TWL/TWL';
+import './Pathway.css'
+import TLOU from '../SkyShows/TLOU/TLOU.js';
+import TWL from '../SkyShows/TWL/TWL';
 import Comingsoon from '../Comingsoon/Comingsoon';
+import HOTD from '../SkyShows/HOTD/HOTD';
+import { Link } from 'react-router-dom';
 
 
 const Pathway = () => {
@@ -19,15 +20,15 @@ const Pathway = () => {
 				<Navbar />
 				<div className="content">
 					<Routes>
-					<Route exact path="/" element={<Login />}>
+						<Route exact path="/" element={<Login />}>
 						</Route>
 						<Route exact path="/dashboard" element={<Dashboard />}>
 						</Route>
-						<Route exact path="/houseofthedragon" element={<KingsLanding />}>
+						<Route exact path="/houseofthedragon" element={<HOTD />}>
 						</Route>
-						<Route exact path="/thelastofus" element={<Thelastofus />}>
+						<Route exact path="/thelastofus" element={<TLOU />}>
 						</Route>
-						<Route exact path="/thewhitelotus" element={<Thewhitelotus />}>
+						<Route exact path="/thewhitelotus" element={<TWL />}>
 						</Route>
 						<Route exact path='/register' element={<Register />}>
             			</Route>
@@ -42,6 +43,8 @@ const Pathway = () => {
 						</Route>
 					</Routes>
 				</div>
+				{/* <Link to="/dashboard">Dashboard</Link>
+        <Link to="/Comingsoon">Coming Soon</Link> */}
 			</div>
 		</Router>
 	);
