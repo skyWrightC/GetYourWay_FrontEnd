@@ -3,13 +3,13 @@ import Navbar from '../Navbar/Navbar';
 import Dashboard from '../Dashboard/Dashboard';
 import Login from '../Login/Login';
 import Contact from '../Contact/Contact';
-import About from '../About/About';
 import Register from '../Register/Register';
 import KingsLanding from '../SkyShows/HOTD/HOTD';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './Routes.css';
 import Thelastofus from '../SkyShows/TLOU/TLOU.js';
 import Thewhitelotus from '../SkyShows/TWL/TWL';
+import Comingsoon from '../Comingsoon/Comingsoon';
 
 
 const Pathway = () => {
@@ -33,7 +33,7 @@ const Pathway = () => {
             			</Route>
 						<Route exact path="/contact" element={<Contact />}>
 						</Route>
-						<Route exact path="/about" element={<About />}>
+						<Route exact path="/comingsoon" element={<Comingsoon />}>
 						</Route>
 						{/* ''*'' to catch any other route. this is at the bottom so the above routes can function properly.
             if the user enters a wrong path on the website this should show an error page to re-route them back--

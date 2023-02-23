@@ -13,7 +13,6 @@ function Home() {
       <MultiActionAreaCard />
       <br />
       </div>
-      
     </div>
   );
 }
