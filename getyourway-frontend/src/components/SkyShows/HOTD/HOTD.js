@@ -1,9 +1,11 @@
 import { useMemo, useState } from "react";
-import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, MarkerF, PolylineF } from "@react-google-maps/api";
 import "./GoogleMaps.css";
 import { Button, CardActions } from "@mui/material";
 import axios from "axios";
 import { SERVER_URL } from "../../constants";
+
+
 
 // This is the actual component
 
@@ -19,6 +21,10 @@ function HOTD() {
 	const kings = useMemo(() => ({ lat: 42.6507, lng: 18.0944 }), []);
 	const drift = useMemo(() => ({ lat: 50.1172, lng: -5.4778 }), []);
 	const pit = useMemo(() => ({ lat: 39.4753, lng: -6.3724 }), []);
+  const flightPlanCoordinates = [
+    { lat: 42.6507, lng: 18.0944 },
+    { lat: 39.4753, lng: -6.3724 }
+  ];
 
 	const [flightDuration, setFlightDuration] = useState("");
 
@@ -129,6 +135,11 @@ function HOTD() {
 						center={drift}
 						mapContainerClassName="map-container"
 					>
+             <PolylineF
+          path={flightPlanCoordinates}
+          strokeColor="#FF0000"
+          strokeOpacity= {1.0}
+          strokeWeight= {2} />
 						<MarkerF position={drift} />
 					</GoogleMap>
 					<article className="drift-article">

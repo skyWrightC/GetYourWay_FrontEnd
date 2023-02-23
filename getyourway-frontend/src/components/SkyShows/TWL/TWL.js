@@ -11,14 +11,12 @@ import { SERVER_URL } from "../../constants";
 // }
 
 function TWL() {
-	const { isLoaded } = useLoadScript({
-		googleMapsApiKey: "",
-	});
-	const DomenicoPalace = useMemo(() => ({ lat: 37.8498, lng: 15.2834 }), []);
-	const Wailea = useMemo(
-		() => ({ lat: 20.862416178, lng: -156.482784134 }),
-		[]
-	);
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: "",
+  });
+  const DomenicoPalace = useMemo(() => ({ lat: 37.8498, lng: 15.2834 }), []);
+  const Wailea = useMemo(() => ({ lat: 20.862416178, lng: -156.482784134 }), []);
+ 
 
 	const [flightDuration, setFlightDuration] = useState("");
 
