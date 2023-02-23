@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import "./TWL.css";
+import { Button, CardActions } from '@mui/material';
 
 function Thewhitelotus() {
   const { isLoaded } = useLoadScript({
@@ -32,6 +33,15 @@ function Map() {
           County. Its total population is 42,615 (2011 census). In 1979, the
           city of Dubrovnik was added to the UNESCO list of World Heritage Sites
           in recognition of its outstanding medieval architecture and fortified
+
+
+          <div>
+          <CardActions>
+            <Button className="travellinks" href="" size="large" color="primary">
+                Visit The This Location
+              </Button>
+          </CardActions>
+          </div>
           </article>
         <GoogleMap
           zoom={8}
@@ -61,6 +71,15 @@ function Map() {
         
         In reality, Driftmark is a medieval church dating back to the 12th century on St. Michael’s Mount,
         a rocky island housing a small community off the coast of Cornwall, linked to Marazion island by a tidal causeway.
+
+
+        <div>
+          <CardActions>
+            <Button className="travellinks" href="" size="large" color="primary">
+                Visit The This Location
+              </Button>
+          </CardActions>
+          </div>
           </article>
       </div>
       <br />
@@ -76,6 +95,15 @@ function Map() {
        The scenes in the streets of King's Landing from episodes eight and nine, "The Lord of the Tides" and "The Green Council", were filmed in Cáceres.
 
 The Dragonpit exterior was filmed at St. George's Square, removing San Francisco Javier church digitally.
+
+
+<div>
+          <CardActions>
+            <Button className="travellinks" href="" size="large" color="primary">
+                Visit The This Location
+              </Button>
+          </CardActions>
+          </div>
           </article>
         <br />
       <GoogleMap 
@@ -85,6 +113,13 @@ The Dragonpit exterior was filmed at St. George's Square, removing San Francisco
         <MarkerF position={Pal} />
       </GoogleMap>
       </div>
+      <div>
+          <CardActions>
+            <Button className="travellinks" href="" size="large" color="primary">
+                Visit The This Location
+              </Button>
+          </CardActions>
+          </div>
     </div>
   );
 }
