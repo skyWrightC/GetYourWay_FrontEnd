@@ -17,6 +17,7 @@ function HOTD() {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "",
   });
+  
 
   
   const kings = useMemo(() => ({ lat: 42.6507, lng: 18.0944 }), []);
@@ -27,18 +28,18 @@ function HOTD() {
 
   const handleSearch = () => {
     // The setIsLoading is set to true and displays message
-    // const token = sessionStorage.getItem("");
+    const token = sessionStorage.getItem("jwt");
     const url = SERVER_URL + "flight";
     // This data is taken from the states at the top of the page and submits as a JSON structure.
     const payload = {
       departure: "LHR",
-      destination: "KEF",
-      date: "2023-02-24",
+      destination: "DBV",
+      date: "2023-03-01",
       adults: 1,
     };
     // Comment end
     axios
-      .post(url, payload, { headers: { Authorization: "" } })
+      .post(url, payload, { headers: { Authorization: token } })
       .then((response) => {
         // setFlightDuration(response.data.duration);
         // The setIsLoading is set to false and hides the message
@@ -81,7 +82,7 @@ function HOTD() {
           census). In 1979, the city of Dubrovnik was added to the UNESCO list
           of World Heritage Sites in recognition of its outstanding medieval
           architecture and fortified 
-          <p>hello {flightDuration}</p>
+          
           <div>
             <CardActions>
               <Button
@@ -104,7 +105,11 @@ function HOTD() {
         >
           <MarkerF position={kings} />
         </GoogleMap>
+        </div>
         <br />
+      <br />
+      <div>
+        <h2>{flightDuration}</h2>
       </div>
       <br />
       <br />
