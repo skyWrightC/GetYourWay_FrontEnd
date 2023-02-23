@@ -38,7 +38,7 @@ function HOTD() {
     };
     // Comment end
     axios
-      .post(url, payload, { headers: { Authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjc3MTkwMTk1fQ.ww81Tvy7WufR6N32MIiN0DnFFKvqA2M1zdkVFAkDEPmhC1dvHedErNaPxbiW_QWjWkmGiciBTC0rOEVMB3x-dQ" } })
+      .post(url, payload, { headers: { Authorization: "" } })
       .then((response) => {
         // setFlightDuration(response.data.duration);
         // The setIsLoading is set to false and hides the message
