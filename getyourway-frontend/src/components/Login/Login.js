@@ -15,11 +15,6 @@ const Login = () => {
     setUser({...user, [event.target.name] : event.target.value})
   }
 
-  
-
-
-
-
 
   const login = () => {
     //let jsonuser = JSON.stringify(user); 
