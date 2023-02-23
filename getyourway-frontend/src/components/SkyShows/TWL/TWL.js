@@ -15,8 +15,8 @@ function TWL() {
     googleMapsApiKey: "",
   });
   const DomenicoPalace = useMemo(() => ({ lat: 37.8498, lng: 15.2834 }), []);
-  const Noto = useMemo(() => ({ lat: 36.8924, lng: 15.0652 }), []);
-  const Pal = useMemo(() => ({ lat: 38.1157, lng: 13.3615 }), []);
+  const Wailea = useMemo(() => ({ lat: 20.862416178, lng: -156.482784134 }), []);
+ 
 
   if (!isLoaded) { return <div>Loading...</div>}
   else {
@@ -28,20 +28,19 @@ function TWL() {
       <div className="Taorminacontainer">
         <br />
           <article className="Taormina-article">
-          Dubrovnik is a
-          city in southern Dalmatia, Croatia, by the Adriatic Sea. It was
-          historically known as Ragusa (pronounced [raˈɡuza]; see notes on
-          naming). It is one of the most prominent tourist destinations in the
-          Mediterranean, a seaport and the centre of the Dubrovnik-Neretva
-          County. Its total population is 42,615 (2011 census). In 1979, the
-          city of Dubrovnik was added to the UNESCO list of World Heritage Sites
-          in recognition of its outstanding medieval architecture and fortified
+          Most of the action takes place at the San Domenico Palace hotel in Taormina, 
+          on the north-east coast of Sicily. Situated high on the rocks a little inland, 
+          it overlooks the Ionian Sea, Mount Etna and an ancient amphitheatre, built in 
+          the Greek style by the Romans. As well as the still-active Etna, the town is 
+          famous for its proximity to the Isola Bella nature reserve and for its medieval 
+          architecture, which put it on the map for the 
+          aristocratic Grand Tour of the 19th century.
 
 
           <div>
           <CardActions>
             <Button className="travellinks" size="large" color="primary">
-                Visit The This Location
+                Visit This Location
               </Button>
           </CardActions>
           </div>
@@ -57,29 +56,30 @@ function TWL() {
       <br />
       <br />
       <br />
-      <h2>Noto, Sicily</h2>
+      <h2>Four Seasons Resort Maui at Wailea, Hawaii</h2>
       <br />
-      <div className="notocontainer">
+      <div className="waileacontainer">
         <br />
         <GoogleMap
           zoom={8}
-          center={Noto}
+          center={Wailea}
           mapContainerClassName="map-container">
-          <MarkerF position={Noto} />
+          <MarkerF position={Wailea} />
         </GoogleMap>
-        <article className="noto-article">
-        At the edge of Kings Landing, there is a large body of water called Blackwater Bay. It houses Driftmark,
-        a castle and home to House Velaryon. It previously featured in Game of Thrones during the Battle of the Blackwater. Lord Corlys Velaryon, also known as the Sea Snake, is a key character in House of the Dragon,
-        sitting on the small council as Master of Ships.
-        
-        In reality, Driftmark is a medieval church dating back to the 12th century on St. Michael’s Mount,
-        a rocky island housing a small community off the coast of Cornwall, linked to Marazion island by a tidal causeway.
+        <article className="Wailea-article">
+        Having become one of the breakout hits of the 2021 lockdown, and then winning 10 Emmy Awards, 
+        The White Lotus turned from a self-contained mini-series into a franchise. Depicting a highly 
+        eventful week in the luxurious Hawaiian resort of the title, where glossily monied guests meet 
+        harried hotel staff, season one employed farce, black comedy and just enough closely observed 
+        sympathy to skewer the more problematic aspects of luxury travel. Filmed in a single location 
+        under strict covid protocols, it had a rare edge that was partly fuelled by the situation of 
+        its making but the prospect of a new season, with us now, is still to be relished.
 
 
         <div>
           <CardActions>
             <Button className="travellinks" size="large" color="primary">
-                Visit The This Location
+                Visit This Location
               </Button>
           </CardActions>
           </div>
@@ -88,34 +88,6 @@ function TWL() {
       <br />
       <br />
       <br />
-      <h2>Palermo, Italy</h2>
-      <br />
-      <div className="palcontainer">
-      <article className="pal-article">
-      HBO returned to Cáceres in Spain to film scenes for House of The Dragon, after the filming location
-       was previously used in Game of Thrones it stood in for the Lannister stronghold, King's Landing, in season 7.
-
-       The scenes in the streets of King's Landing from episodes eight and nine, "The Lord of the Tides" and "The Green Council", were filmed in Cáceres.
-
-The Dragonpit exterior was filmed at St. George's Square, removing San Francisco Javier church digitally.
-
-
-<div>
-          <CardActions>
-            <Button className="travellinks" size="large" color="primary">
-                Visit The This Location
-              </Button>
-          </CardActions>
-          </div>
-          </article>
-        <br />
-      <GoogleMap 
-        zoom={8} 
-        center={Pal} 
-        mapContainerClassName="map-container">
-        <MarkerF position={Pal} />
-      </GoogleMap>
-      </div>
     </div>
   );
 }

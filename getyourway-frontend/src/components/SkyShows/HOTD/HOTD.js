@@ -54,7 +54,7 @@ function HOTD() {
 
         
 
-        if (response.data.length == 0) {
+        if (response.data.length === 0) {
           console.log("No Flights Available.");
         }
       })
