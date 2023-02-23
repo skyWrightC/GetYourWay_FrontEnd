@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../images/Sky.png";
 import header from '../images/Skyheader.png';
-import { Button } from "@material-ui/core";
 
 const Navbar = () => {
   return (
@@ -17,14 +16,14 @@ const Navbar = () => {
         <Link to="/Comingsoon">Coming Soon</Link>
         <Link to="/contact">Contact us</Link>
         <Link className="loginbtn"
-          to="/"
+          to="/logout"
           style={{
             color: "white",
             backgroundColor: "rgb(4, 52, 134)",
             borderRadius: "6px",
           }}
         >
-          Login
+          Logout
         </Link>
       </div>
     </nav>
