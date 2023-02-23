@@ -1,13 +1,13 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import "./TWL.css";
-import { Button, CardActions } from '@mui/material';
+import { Button, CardActions } from "@mui/material";
+import axios from "axios";
+import { SERVER_URL } from "../../constants";
 
-
-
-  //if maps !isLoaded(hasnt loaded) return Loading... else return the Map function
-  // if (!isLoaded) return <div>Loading...</div>;
-  // return <Map />;
+//if maps !isLoaded(hasnt loaded) return Loading... else return the Map function
+// if (!isLoaded) return <div>Loading...</div>;
+// return <Map />;
 // }
 
 function TWL() {
@@ -18,79 +18,143 @@ function TWL() {
   const Wailea = useMemo(() => ({ lat: 20.862416178, lng: -156.482784134 }), []);
  
 
-  if (!isLoaded) { return <div>Loading...</div>}
-  else {
+	const [flightDuration, setFlightDuration] = useState("");
 
-  return (
-    <div className="TWL-Maps">
-      <h2>San Domenico Palace, Taormina</h2>
-      <br />
-      <div className="Taorminacontainer">
-        <br />
-          <article className="Taormina-article">
-          Most of the action takes place at the San Domenico Palace hotel in Taormina, 
-          on the north-east coast of Sicily. Situated high on the rocks a little inland, 
-          it overlooks the Ionian Sea, Mount Etna and an ancient amphitheatre, built in 
-          the Greek style by the Romans. As well as the still-active Etna, the town is 
-          famous for its proximity to the Isola Bella nature reserve and for its medieval 
-          architecture, which put it on the map for the 
-          aristocratic Grand Tour of the 19th century.
+	const handleSearch = (dest) => {
+		// The setIsLoading is set to true and displays message
+		const token = sessionStorage.getItem("jwt");
+		const url = SERVER_URL + "flight";
+		let payload = {};
+		// This data is taken from the states at the top of the page and submits as a JSON structure.
+		if (dest === "visitA") {
+			payload = {
+				departure: "LGW",
+				destination: "CTA",
+				date: "2023-03-01",
+				adults: 1,
+			};
+		} else if (dest === "VisitB") {
+			payload = {
+				departure: "LHR",
+				destination: "ITO",
+				date: "2023-03-01",
+				adults: 1,
+			};
+		}
+		// Comment end
+		axios
+			.post(url, payload, { headers: { Authorization: token } })
+			.then((response) => {
+				// setFlightDuration(response.data.duration);
+				// The setIsLoading is set to false and hides the message
+				console.log(response.data);
+				// console.log(response.data.duration);
 
+				setFlightDuration(response.data);
 
-          <div>
-          <CardActions>
-            <Button className="travellinks" size="large" color="primary">
-                Visit This Location
-              </Button>
-          </CardActions>
-          </div>
-          </article>
-        <GoogleMap
-          zoom={8}
-          center={DomenicoPalace}
-          mapContainerClassName="map-container">
-          <MarkerF position={DomenicoPalace} />
-        </GoogleMap>
-        <br />
-      </div>
-      <br />
-      <br />
-      <br />
-      <h2>Four Seasons Resort Maui at Wailea, Hawaii</h2>
-      <br />
-      <div className="waileacontainer">
-        <br />
-        <GoogleMap
-          zoom={8}
-          center={Wailea}
-          mapContainerClassName="map-container">
-          <MarkerF position={Wailea} />
-        </GoogleMap>
-        <article className="Wailea-article">
-        Having become one of the breakout hits of the 2021 lockdown, and then winning 10 Emmy Awards, 
-        The White Lotus turned from a self-contained mini-series into a franchise. Depicting a highly 
-        eventful week in the luxurious Hawaiian resort of the title, where glossily monied guests meet 
-        harried hotel staff, season one employed farce, black comedy and just enough closely observed 
-        sympathy to skewer the more problematic aspects of luxury travel. Filmed in a single location 
-        under strict covid protocols, it had a rare edge that was partly fuelled by the situation of 
-        its making but the prospect of a new season, with us now, is still to be relished.
+				console.log(flightDuration);
 
+				console.log(payload);
+				// Console log an error if the response is
 
-        <div>
-          <CardActions>
-            <Button className="travellinks" size="large" color="primary">
-                Visit This Location
-              </Button>
-          </CardActions>
-          </div>
-          </article>
-      </div>
-      <br />
-      <br />
-      <br />
-    </div>
-  );
+				if (response.data.length === 0) {
+					setFlightDuration(
+						"No Flight found for this destination on this day!"
+					);
+				}
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	};
+
+	if (!isLoaded) {
+		return <div>Loading...</div>;
+	} else {
+		return (
+			<div className="TWL-Maps">
+				<h2>San Domenico Palace, Taormina</h2>
+				<br />
+				<div className="Taorminacontainer">
+					<br />
+					<article className="Taormina-article">
+						Dubrovnik is a city in southern Dalmatia, Croatia, by the Adriatic
+						Sea. It was historically known as Ragusa (pronounced [raˈɡuza]; see
+						notes on naming). It is one of the most prominent tourist
+						destinations in the Mediterranean, a seaport and the centre of the
+						Dubrovnik-Neretva County. Its total population is 42,615 (2011
+						census). In 1979, the city of Dubrovnik was added to the UNESCO list
+						of World Heritage Sites in recognition of its outstanding medieval
+						architecture and fortified
+						<div>
+							<CardActions>
+								<Button
+									className="travellinks"
+									size="large"
+									color="primary"
+									onClick={() => handleSearch("visitA")}
+								>
+									Visit The This Location
+								</Button>
+							</CardActions>
+						</div>
+					</article>
+					<GoogleMap
+						zoom={8}
+						center={DomenicoPalace}
+						mapContainerClassName="map-container"
+					>
+						<MarkerF position={DomenicoPalace} />
+					</GoogleMap>
+					<br />
+				</div>
+				<br />
+				<br />
+				<br />
+				<h2>Four Seasons Resort Maui at Wailea, Hawaii</h2>
+				<br />
+				<div className="waileacontainer">
+					<br />
+					<GoogleMap
+						zoom={8}
+						center={Wailea}
+						mapContainerClassName="map-container"
+					>
+						<MarkerF position={Wailea} />
+					</GoogleMap>
+					<article className="Wailea-article">
+						Having become one of the breakout hits of the 2021 lockdown, and
+						then winning 10 Emmy Awards, The White Lotus turned from a
+						self-contained mini-series into a franchise. Depicting a highly
+						eventful week in the luxurious Hawaiian resort of the title, where
+						glossily monied guests meet harried hotel staff, season one employed
+						farce, black comedy and just enough closely observed sympathy to
+						skewer the more problematic aspects of luxury travel. Filmed in a
+						single location under strict covid protocols, it had a rare edge
+						that was partly fuelled by the situation of its making but the
+						prospect of a new season, with us now, is still to be relished.
+						<div>
+							<CardActions>
+								<Button
+									className="travellinks"
+									size="large"
+									color="primary"
+									onClick={() => handleSearch("visitB")}
+								>
+									Visit The This Location
+								</Button>
+							</CardActions>
+						</div>
+					</article>
+				</div>
+				<br />
+				<div>
+					<h2 id="flight">{flightDuration}</h2>
+				</div>
+				<br />
+			</div>
+		);
+	}
 }
-};
 
 export default TWL;
