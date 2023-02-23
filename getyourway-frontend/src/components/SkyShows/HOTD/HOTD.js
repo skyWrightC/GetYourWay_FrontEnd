@@ -109,6 +109,7 @@ function HOTD() {
         <br />
       <br />
       <div>
+        
         <h2>{flightDuration}</h2>
       </div>
       <br />
