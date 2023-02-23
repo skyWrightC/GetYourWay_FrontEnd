@@ -62,7 +62,7 @@ const Login = () => {
                   onChange={handleChange}
                   />
                   <br />
-                  <label>Please choose a Password: </label>
+                  <label>Please enter Password: </label>
                 <input
                 //   onSubmit={errorHandle}
                   type="text"
