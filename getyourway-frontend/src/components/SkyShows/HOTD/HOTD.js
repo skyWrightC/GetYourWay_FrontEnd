@@ -27,7 +27,7 @@ function HOTD() {
 
   const handleSearch = () => {
     // The setIsLoading is set to true and displays message
-    // const token = sessionStorage.getItem("eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbnQiLCJleHAiOjE2NzcyNDAyOTB9.LbFsvgH7OYU9xJIm1ZcUP-R2HlEpHwV3NEnIe9rQxMfPG62-S4I2cLJ6QyufQs6XWL0TJ6Zf0QzjR8pRO-TfBA");
+    // const token = sessionStorage.getItem("");
     const url = SERVER_URL + "flight";
     // This data is taken from the states at the top of the page and submits as a JSON structure.
     const payload = {
