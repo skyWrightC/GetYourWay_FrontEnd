@@ -10,6 +10,7 @@
     "@material/card": "^14.0.0",
     "@material/typography": "^14.0.0",
     "@mui/lab": "^5.0.0-alpha.120",
+    "@mui/material": "^5.11.10",
     "@react-google-maps/api": "^2.18.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
