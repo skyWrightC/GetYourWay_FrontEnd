@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../images/Sky.png";
 import header from '../images/Skyheader.png';
+import { Button } from "@material-ui/core";
 
 const Navbar = () => {
   return (
@@ -15,7 +16,7 @@ const Navbar = () => {
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/Comingsoon">Coming Soon</Link>
         <Link to="/contact">Contact us</Link>
-        <Link
+        <Link className="loginbtn"
           to="/"
           style={{
             color: "white",
@@ -23,7 +24,7 @@ const Navbar = () => {
             borderRadius: "6px",
           }}
         >
-          Login/Signup
+          Login
         </Link>
       </div>
     </nav>
