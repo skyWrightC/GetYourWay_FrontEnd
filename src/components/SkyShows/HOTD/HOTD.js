@@ -16,7 +16,7 @@ import { SERVER_URL } from "../../constants";
 
 function HOTD() {
 	const { isLoaded } = useLoadScript({
-		googleMapsApiKey: "",
+		googleMapsApiKey: "AIzaSyDlclJ01LYwV8VOQhk837FkIdMyhCyE48M",
 	});
 
 	const [showDriveMessage, setShowDriveMessage] = useState(false);
