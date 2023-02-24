@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, MarkerF, PolylineF } from "@react-google-maps/api";
 import "./TWL.css";
 import { Button, CardActions } from "@mui/material";
 import axios from "axios";
@@ -20,6 +20,17 @@ function TWL() {
 
 	const [flightDuration, setFlightDuration] = useState("");
 	const [weatherResponse, setWeatherResponse] = useState();
+
+	const dominiopalacePlanCoordinates = [
+		{ lat: 37.8498, lng: 15.2834 },
+		{ lat: 37.4673, lng: 15.0658 },
+		{ lat: 51.1537, lng: -0.1821 }
+	];
+  const waileaPlanCoordinates = [
+		{ lat: 20.862416178, lng: -156.482784134 },
+		{ lat: 20.8946, lng: -156.4361},
+		{ lat: 51.4700, lng: -0.4543 }
+	];
 
 	let weatherUrl = "";
 
@@ -100,7 +111,7 @@ function TWL() {
 			.then((response) => {
 				console.log(response.data.weather);
 				setWeatherResponse(
-					`The temperature is currently ${response.data.weather} degrees celcius`
+					`The temperature is currently ${response.data.weather} degrees celsius`
 				);
 
 				if (response.data.length === 0) {
@@ -130,9 +141,17 @@ function TWL() {
 								center={DomenicoPalace}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat:51.1536621 , lng: -0.18206290000000536 }} />
 								<MarkerF position={DomenicoPalace} />
+								<PolylineF
+									path={dominiopalacePlanCoordinates}
+									strokeColor="#FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 							</GoogleMap>
 							<article className="Taormina-article">
+
 							<h2>San Domenico</h2>
 								<br />
 							Situated high on the rocks on Sicily's north east coast, most of the action of 
@@ -167,7 +186,14 @@ function TWL() {
 								center={Wailea}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat: 51.487, lng: -0.327 }} />
 								<MarkerF position={Wailea} />
+								<PolylineF
+									path={waileaPlanCoordinates}
+									strokeColor="#FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 							</GoogleMap>
 							<article className="Wailea-article">
 							<h2>The Four Seasons Resort Maui</h2>
