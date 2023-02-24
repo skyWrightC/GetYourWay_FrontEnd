@@ -258,7 +258,7 @@ function HOTD() {
 								and "The Green Council", were filmed in Cáceres.<span class="bolded"> The Dragonpit
 								exterior was filmed at St. George's Square,</span> removing San
 								Francisco Javier church digitally.
-								<div>s
+								<div>
 									<CardActions>
 										<Button
 											className="travellinks"
