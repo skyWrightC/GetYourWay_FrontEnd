@@ -66,5 +66,10 @@ places-container {
 }
 
 h2 {
-	text-align: center;
+	text-align: center;	
 }
+
+.PolylineF {
+	color: rgb(202, 23, 44);
+}
+

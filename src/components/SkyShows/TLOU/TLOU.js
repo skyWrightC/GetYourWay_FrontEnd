@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, MarkerF, PolylineF } from "@react-google-maps/api";
 import "./TLOU.css";
 import { Button, CardActions } from "@mui/material";
 import axios from "axios";
@@ -9,14 +9,30 @@ import { SERVER_URL } from "../../constants";
 
 function TLOU() {
 	const { isLoaded } = useLoadScript({
-		googleMapsApiKey: "",
+		googleMapsApiKey: "AIzaSyDlclJ01LYwV8VOQhk837FkIdMyhCyE48M",
 	});
-	const ed = useMemo(() => ({ lat: 53.5461, lng: 113.4937 }), []);
-	const cal = useMemo(() => ({ lat: 50.1172, lng: 114.0719 }), []);
-	const can = useMemo(() => ({ lat: 51.0899, lng: 115.3441 }), []);
+	const ed = useMemo(() => ({ lat: 53.5461, lng: -113.4937 }), []);
+	const cal = useMemo(() => ({ lat: 50.1172, lng: -114.0719 }), []);
+	const can = useMemo(() => ({ lat: 51.0899, lng: -115.3441 }), []);
 
 	const [flightDuration, setFlightDuration] = useState("");
 	const [weatherResponse, setWeatherResponse] = useState();
+
+	const edmontonPlanCoordinates = [
+		{ lat: 53.5461, lng: -113.4937 },
+		{ lat: 51.1215, lng: -114.0076 },
+		{ lat: 51.4700, lng: -0.4543 }
+	];
+  const calgaryPlanCoordinates = [
+		{ lat: 50.1172, lng: -114.0719 },
+		{ lat: 51.1215, lng: -114.0076 },
+		{ lat: 51.4700, lng: -0.4543 }
+	];
+  const canmorePlanCoordinates = [
+		{ lat: 51.0899, lng: -115.3441},
+		{ lat: 51.1215, lng: -114.0076 },
+		{ lat: 51.4700, lng: -0.4543 }
+	];
 
 	let weatherUrl = "";
 
@@ -90,7 +106,7 @@ function TLOU() {
 			.then((response) => {
 				console.log(response.data.weather);
 				setWeatherResponse(
-					`The temperature is currently ${response.data.weather} degrees celcius`
+					`The temperature is currently ${response.data.weather} degrees celsius`
 				);
 
 				if (response.data.length === 0) {
@@ -119,7 +135,14 @@ function TLOU() {
 								center={ed}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat: 51.487, lng: -0.327 }} />
 								<MarkerF position={ed} />
+								<PolylineF
+									path={edmontonPlanCoordinates}
+									strokeColor="#FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 							</GoogleMap>
 							<article className="edmonton-article">
 								Dubrovnik is a city in southern Dalmatia, Croatia, by the
@@ -157,7 +180,14 @@ function TLOU() {
 								center={cal}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat: 51.487, lng: -0.327 }} />
 								<MarkerF position={cal} />
+								<PolylineF
+									path={calgaryPlanCoordinates}
+									strokeColor="#FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 							</GoogleMap>
 							<article className="calgary-article">
 								At the edge of Kings Landing, there is a large body of water
@@ -194,7 +224,14 @@ function TLOU() {
 								center={can}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat: 51.487, lng: -0.327 }} />
 								<MarkerF position={can} />
+								<PolylineF
+									path={canmorePlanCoordinates}
+									strokeColor="#FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 							</GoogleMap>
 							<article className="canmore-article">
 								HBO returned to Cáceres in Spain to film scenes for House of The

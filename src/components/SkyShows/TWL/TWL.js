@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, MarkerF, PolylineF } from "@react-google-maps/api";
 import "./TWL.css";
 import { Button, CardActions } from "@mui/material";
 import axios from "axios";
@@ -12,7 +12,7 @@ import { SERVER_URL } from "../../constants";
 
 function TWL() {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "",
+    googleMapsApiKey: "AIzaSyDlclJ01LYwV8VOQhk837FkIdMyhCyE48M",
   });
   const DomenicoPalace = useMemo(() => ({ lat: 37.8498, lng: 15.2834 }), []);
   const Wailea = useMemo(() => ({ lat: 20.862416178, lng: -156.482784134 }), []);
@@ -20,6 +20,17 @@ function TWL() {
 
 	const [flightDuration, setFlightDuration] = useState("");
 	const [weatherResponse, setWeatherResponse] = useState();
+
+	const dominiopalacePlanCoordinates = [
+		{ lat: 37.8498, lng: 15.2834 },
+		{ lat: 37.4673, lng: 15.0658 },
+		{ lat: 51.1537, lng: -0.1821 }
+	];
+  const waileaPlanCoordinates = [
+		{ lat: 20.862416178, lng: -156.482784134 },
+		{ lat: 20.8946, lng: -156.4361},
+		{ lat: 51.4700, lng: -0.4543 }
+	];
 
 	let weatherUrl = "";
 
@@ -100,7 +111,7 @@ function TWL() {
 			.then((response) => {
 				console.log(response.data.weather);
 				setWeatherResponse(
-					`The temperature is currently ${response.data.weather} degrees celcius`
+					`The temperature is currently ${response.data.weather} degrees celsius`
 				);
 
 				if (response.data.length === 0) {
@@ -130,17 +141,22 @@ function TWL() {
 								center={DomenicoPalace}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat:51.1536621 , lng: -0.18206290000000536 }} />
 								<MarkerF position={DomenicoPalace} />
+								<PolylineF
+									path={dominiopalacePlanCoordinates}
+									strokeColor="#FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 							</GoogleMap>
 							<article className="Taormina-article">
-								Dubrovnik is a city in southern Dalmatia, Croatia, by the
-								Adriatic Sea. It was historically known as Ragusa (pronounced
-								[raˈɡuza]; see notes on naming). It is one of the most prominent
-								tourist destinations in the Mediterranean, a seaport and the
-								centre of the Dubrovnik-Neretva County. Its total population is
-								42,615 (2011 census). In 1979, the city of Dubrovnik was added
-								to the UNESCO list of World Heritage Sites in recognition of its
-								outstanding medieval architecture and fortified
+							Situated high on the rocks on Sicily's north east coast, most of the action of 
+							season two of The White Lotus takes place in the expansive San Domenico Palace - 
+							once a 15th century monastery, now a luxury resort in the Four Seasons group after 
+							a careful 2021 refurbishment. There's 111 rooms, suites and speciality suites, a spa, 
+							a fine-dining restaurant, ancient courtyards and gardens, and a beautiful 
+							infinity pool - a scene stealer in The White Lotus.
 								<div>
 									<CardActions>
 										<Button
@@ -167,7 +183,14 @@ function TWL() {
 								center={Wailea}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat: 51.487, lng: -0.327 }} />
 								<MarkerF position={Wailea} />
+								<PolylineF
+									path={waileaPlanCoordinates}
+									strokeColor="#FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 							</GoogleMap>
 							<article className="Wailea-article">
 								Having become one of the breakout hits of the 2021 lockdown, and

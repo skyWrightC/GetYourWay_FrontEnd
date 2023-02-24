@@ -16,7 +16,7 @@ import { SERVER_URL } from "../../constants";
 
 function HOTD() {
 	const { isLoaded } = useLoadScript({
-		googleMapsApiKey: "",
+		googleMapsApiKey: "AIzaSyDlclJ01LYwV8VOQhk837FkIdMyhCyE48M",
 	});
 
 	const [showDriveMessage, setShowDriveMessage] = useState(false);
@@ -25,9 +25,20 @@ function HOTD() {
 	const kings = useMemo(() => ({ lat: 42.6507, lng: 18.0944 }), []);
 	const drift = useMemo(() => ({ lat: 50.1172, lng: -5.4778 }), []);
 	const pit = useMemo(() => ({ lat: 39.4753, lng: -6.3724 }), []);
-	const flightPlanCoordinates = [
+	const kingsPlanCoordinates = [            
 		{ lat: 42.6507, lng: 18.0944 },
+    { lat: 42.560217, lng: 18.262193 },
+		{ lat: 51.4700, lng: -0.4543 }
+	];
+  const driftPlanCoordinates = [
+		{ lat: 51.487, lng: -0.327 },
+    { lat: 50.122709, lng: -5.473380 }, 
+		{ lat: 50.1172, lng: -5.4778 }
+	];
+  const pitPlanCoordinates = [
 		{ lat: 39.4753, lng: -6.3724 },
+    { lat:40.4983, lng: -3.5676},
+		{ lat: 51.4700, lng: -0.4543 }
 	];
 
 	const [flightDuration, setFlightDuration] = useState("");
@@ -104,7 +115,7 @@ function HOTD() {
 			.then((response) => {
 				console.log(response.data.weather);
 				setWeatherResponse(
-					`The temperature is currently ${response.data.weather} degrees celcius`
+					`The temperature is currently ${response.data.weather} degrees celsius`
 				);
 
 				if (response.data.length === 0) {
@@ -134,8 +145,9 @@ function HOTD() {
 								center={kings}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat: 51.487, lng: -0.327 }} />
 								<PolylineF
-									path={flightPlanCoordinates}
+									path={kingsPlanCoordinates}
 									strokeColor="#FF0000"
 									strokeOpacity={1.0}
 									strokeWeight={2}
@@ -176,6 +188,13 @@ function HOTD() {
 								center={drift}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat: 51.487, lng: -0.327 }} />
+                <PolylineF
+									path={driftPlanCoordinates}
+									strokeColor="#FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 								<MarkerF position={drift} />
 							</GoogleMap>
 							<article className="drift-article">
@@ -214,6 +233,13 @@ function HOTD() {
 								center={pit}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat: 51.487, lng: -0.327 }} />
+                <PolylineF
+									path={pitPlanCoordinates}
+									strokeColor="FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 								<MarkerF position={pit} />
 							</GoogleMap>
 							<article className="pit-article">
@@ -247,7 +273,9 @@ function HOTD() {
 					{showDriveMessage && (
 						<h2>
 							The approximate travel time from Osterley, London to St Michaels
-							Mount in Cornwall via the M4, M5 and A30 is 5 hours
+							Mount in Cornwall via the M4, M5 and A30 is 5 hours. During high tide the castle is accessed by a 
+							short boat trip across the bay. During low tide,
+							its a brisk 16 minute walk along the causeway to the castle. 
 						</h2>
 					)}
 					<h2 id="flight">{flightDuration}</h2>
