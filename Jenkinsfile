@@ -6,11 +6,11 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Fix dependencies') {
-            steps {
-                sh 'npm audit fix'
-            }
-        }
+//         stage('Fix dependencies') {
+//             steps {
+//                 sh 'npm audit fix'
+//             }
+//         }
         stage('Build application') {
             steps {
                 sh 'npm run build'
