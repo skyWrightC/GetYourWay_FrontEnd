@@ -141,7 +141,7 @@ function HOTD() {
 						<div className="kingscontainer">
 							<br />
 							<GoogleMap
-								zoom={13}
+								zoom={3}
 								center={kings}
 								mapContainerClassName="map-container"
 							>
@@ -174,7 +174,7 @@ function HOTD() {
 											color="primary"
 											onClick={() => handleSearch("visitA")}
 										>
-											Visit This Location
+											Visit This Location!
 										</Button>
 									</CardActions>
 								</div>
@@ -187,7 +187,7 @@ function HOTD() {
 						<div className="driftcontainer">
 							<br />
 							<GoogleMap
-								zoom={13}
+								zoom={5}
 								center={drift}
 								mapContainerClassName="map-container"
 							>
@@ -221,7 +221,7 @@ function HOTD() {
 											color="primary"
 											onClick={handleClick}
 										>
-											Visit This Location
+											Visit This Location!
 										</Button>
 									</CardActions>
 								</div>
@@ -234,7 +234,7 @@ function HOTD() {
 						<div className="pitcontainer">
 							<br />
 							<GoogleMap
-								zoom={13}
+								zoom={3}
 								center={pit}
 								mapContainerClassName="map-container"
 							>
@@ -266,7 +266,7 @@ function HOTD() {
 											color="primary"
 											onClick={() => handleSearch("visitC")}
 										>
-											Visit This Location
+											Visit This Location!
 										</Button>
 									</CardActions>
 								</div>

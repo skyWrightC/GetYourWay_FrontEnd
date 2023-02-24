@@ -161,7 +161,7 @@ function TLOU() {
 											color="primary"
 											onClick={() => handleSearch("visitA")}
 										>
-											Visit The This Location
+											Visit This Location!
 										</Button>
 									</CardActions>
 								</div>
@@ -204,7 +204,7 @@ function TLOU() {
 											color="primary"
 											onClick={() => handleSearch("visitB")}
 										>
-											Visit The This Location
+											Visit This Location!
 										</Button>
 									</CardActions>
 								</div>
@@ -242,7 +242,7 @@ function TLOU() {
 											color="primary"
 											onClick={() => handleSearch("visitC")}
 										>
-											Visit The This Location
+											Visit The This Location!
 										</Button>
 									</CardActions>
 								</div>

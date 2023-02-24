@@ -137,7 +137,7 @@ function TWL() {
 						<div className="Taorminacontainer">
 							<br />
 							<GoogleMap
-								zoom={8}
+								zoom={3}
 								center={DomenicoPalace}
 								mapContainerClassName="map-container"
 							>
@@ -168,7 +168,7 @@ function TWL() {
 											color="primary"
 											onClick={() => handleSearch("visitA")}
 										>
-											Visit The This Location
+											Visit This Location!
 										</Button>
 									</CardActions>
 								</div>
@@ -182,7 +182,7 @@ function TWL() {
 						<div className="waileacontainer">
 							<br />
 							<GoogleMap
-								zoom={8}
+								zoom={3}
 								center={Wailea}
 								mapContainerClassName="map-container"
 							>
@@ -217,7 +217,7 @@ function TWL() {
 											color="primary"
 											onClick={() => handleSearch("visitB")}
 										>
-											Visit The This Location
+											Visit This Location!
 										</Button>
 									</CardActions>
 								</div>
