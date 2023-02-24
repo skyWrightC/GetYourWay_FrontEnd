@@ -9,7 +9,7 @@ import { SERVER_URL } from "../../constants";
 
 function TLOU() {
 	const { isLoaded } = useLoadScript({
-		googleMapsApiKey: "AIzaSyDlclJ01LYwV8VOQhk837FkIdMyhCyE48M",
+		googleMapsApiKey: "",
 	});
 	const ed = useMemo(() => ({ lat: 53.5461, lng: -113.4937 }), []);
 	const cal = useMemo(() => ({ lat: 50.1172, lng: -114.0719 }), []);
