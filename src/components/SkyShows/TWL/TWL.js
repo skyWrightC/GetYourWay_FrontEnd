@@ -121,7 +121,7 @@ function TWL() {
 			<>
 				<div className="columns">
 					<div className="column">
-						<h2>San Domenico Palace, Taormina</h2>
+						<h2>Taormina</h2>
 						<br />
 						<div className="Taorminacontainer">
 							<br />
@@ -133,14 +133,14 @@ function TWL() {
 								<MarkerF position={DomenicoPalace} />
 							</GoogleMap>
 							<article className="Taormina-article">
-								Dubrovnik is a city in southern Dalmatia, Croatia, by the
-								Adriatic Sea. It was historically known as Ragusa (pronounced
-								[raˈɡuza]; see notes on naming). It is one of the most prominent
-								tourist destinations in the Mediterranean, a seaport and the
-								centre of the Dubrovnik-Neretva County. Its total population is
-								42,615 (2011 census). In 1979, the city of Dubrovnik was added
-								to the UNESCO list of World Heritage Sites in recognition of its
-								outstanding medieval architecture and fortified
+							<h2>San Domenico</h2>
+								<br />
+							Situated high on the rocks on Sicily's north east coast, most of the action of 
+							season two of The White Lotus takes place in the expansive <span class="bolded">San Domenico Palace - 
+							once a 15th century monastery, now a luxury resort in the Four Seasons group after 
+							a careful 2021 refurbishment.</span> There's 111 rooms, suites and speciality suites, a spa, 
+							a fine-dining restaurant, ancient courtyards and gardens, and a beautiful 
+							infinity pool - a scene stealer in The White Lotus.
 								<div>
 									<CardActions>
 										<Button
@@ -158,7 +158,7 @@ function TWL() {
 					</div>
 
 					<div className="column">
-						<h2>Four Seasons Resort Maui at Wailea, Hawaii</h2>
+						<h2>Wailea, Hawaii</h2>
 						<br />
 						<div className="waileacontainer">
 							<br />
@@ -170,6 +170,8 @@ function TWL() {
 								<MarkerF position={Wailea} />
 							</GoogleMap>
 							<article className="Wailea-article">
+							<h2>The Four Seasons Resort Maui</h2>
+								<br />
 								Having become one of the breakout hits of the 2021 lockdown, and
 								then winning 10 Emmy Awards, The White Lotus turned from a
 								self-contained mini-series into a franchise. Depicting a highly
@@ -177,9 +179,9 @@ function TWL() {
 								where glossily monied guests meet harried hotel staff, season
 								one employed farce, black comedy and just enough closely
 								observed sympathy to skewer the more problematic aspects of
-								luxury travel. Filmed in a single location under strict covid
+								luxury travel.<span class="bolded"> Filmed in a single location under strict covid
 								protocols, it had a rare edge that was partly fuelled by the
-								situation of its making but the prospect of a new season, with
+								situation of its making but the prospect of a new season,</span> with
 								us now, is still to be relished.
 								<div>
 									<CardActions>

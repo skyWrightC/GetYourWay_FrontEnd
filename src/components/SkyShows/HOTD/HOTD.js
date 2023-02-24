@@ -125,7 +125,7 @@ function HOTD() {
 			<>
 				<div className="columns">
 					<div className="column">
-						<h2>Kings Landing - Dubrovnik, Croatia</h2>
+						<h2>Dubrovnik, Croatia</h2>
 						<br />
 						<div className="kingscontainer">
 							<br />
@@ -142,14 +142,17 @@ function HOTD() {
 								/>
 								<MarkerF position={kings} />
 							</GoogleMap>
-							<article className="dubrovnik-article">
+							{/* <img src="dubrovnik.png" alt="dubrovnik" /> */}
+								<article className="dubrovnik-article">
+								<h2>Kings Landing</h2>
+								<br />
 								Dubrovnik is a city in southern Dalmatia, Croatia, by the
 								Adriatic Sea. It was historically known as Ragusa (pronounced
-								[raˈɡuza]; see notes on naming). It is one of the most prominent
-								tourist destinations in the Mediterranean, a seaport and the
+								[raˈɡuza]). It is one of the <span class ="bolded"> most prominent
+								tourist destinations in the Mediterranean,</span> a seaport and the
 								centre of the Dubrovnik-Neretva County. Its total population is
 								42,615 (2011 census). In 1979, the city of Dubrovnik was added
-								to the UNESCO list of World Heritage Sites in recognition of its
+								to the UNESCO list of <span class="bolded"> World Heritage Sites </span> in recognition of its
 								outstanding medieval architecture and fortified
 								<div>
 									<CardActions>
@@ -159,7 +162,7 @@ function HOTD() {
 											color="primary"
 											onClick={() => handleSearch("visitA")}
 										>
-											Visit The This Location
+											Visit This Location
 										</Button>
 									</CardActions>
 								</div>
@@ -167,7 +170,7 @@ function HOTD() {
 						</div>
 					</div>
 					<div className="column">
-						<h2>Driftmark - St Michaels Mount, England</h2>
+						<h2>St Michaels Mount, England</h2>
 						<br />
 						<div className="driftcontainer">
 							<br />
@@ -179,14 +182,16 @@ function HOTD() {
 								<MarkerF position={drift} />
 							</GoogleMap>
 							<article className="drift-article">
+								<h2>DriftMark</h2>
+								<br />
 								At the edge of Kings Landing, there is a large body of water
 								called Blackwater Bay. It houses Driftmark, a castle and home to
 								House Velaryon. It previously featured in Game of Thrones during
-								the Battle of the Blackwater. Lord Corlys Velaryon, also known
+								the <span class="bolded">Battle of the Blackwater. </span>  Lord Corlys Velaryon, also known
 								as the Sea Snake, is a key character in House of the Dragon,
 								sitting on the small council as Master of Ships. In reality,
-								Driftmark is a medieval church dating back to the 12th century
-								on St. Michael’s Mount, a rocky island housing a small community
+								Driftmark is a <span class="bolded"> medieval church dating back to the 12th century </span>
+								 on St. Michael’s Mount, a rocky island housing a small community
 								off the coast of Cornwall, linked to Marazion island by a tidal
 								causeway.
 								<div>
@@ -197,7 +202,7 @@ function HOTD() {
 											color="primary"
 											onClick={handleClick}
 										>
-											Visit The This Location
+											Visit This Location
 										</Button>
 									</CardActions>
 								</div>
@@ -205,7 +210,7 @@ function HOTD() {
 						</div>
 					</div>
 					<div className="column">
-						<h2>The DragonPit - Cáceres, Spain</h2>
+						<h2>Cáceres, Spain</h2>
 						<br />
 						<div className="pitcontainer">
 							<br />
@@ -217,15 +222,17 @@ function HOTD() {
 								<MarkerF position={pit} />
 							</GoogleMap>
 							<article className="pit-article">
+								<h2>The Dragon Pit</h2>
+								<br />
 								HBO returned to Cáceres in Spain to film scenes for House of The
 								Dragon, after the filming location was previously used in Game
 								of Thrones it stood in for the Lannister stronghold, King's
 								Landing, in season 7. The scenes in the streets of King's
 								Landing from episodes eight and nine, "The Lord of the Tides"
-								and "The Green Council", were filmed in Cáceres. The Dragonpit
-								exterior was filmed at St. George's Square, removing San
+								and "The Green Council", were filmed in Cáceres.<span class="bolded"> The Dragonpit
+								exterior was filmed at St. George's Square,</span> removing San
 								Francisco Javier church digitally.
-								<div>
+								<div>s
 									<CardActions>
 										<Button
 											className="travellinks"
@@ -233,7 +240,7 @@ function HOTD() {
 											color="primary"
 											onClick={() => handleSearch("visitC")}
 										>
-											Visit The This Location
+											Visit This Location
 										</Button>
 									</CardActions>
 								</div>
@@ -244,6 +251,8 @@ function HOTD() {
 				</div>
 
 				<div>
+					<br/>
+					<br/>
 					{showDriveMessage && (
 						<h2>
 							The approximate travel time from Osterley, London to St Michaels
