@@ -4,6 +4,7 @@ import logo from "../images/Sky.png";
 import header from '../images/Skyheader.png';
 
 const Navbar = () => {
+  
   return (
   <header>
     <img src={header} className='skyHeader' alt='skyheader'/>
@@ -32,3 +33,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
