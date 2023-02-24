@@ -90,7 +90,7 @@ function TLOU() {
 			.then((response) => {
 				console.log(response.data.weather);
 				setWeatherResponse(
-					`The temperature is currently ${response.data.weather} degrees celcius`
+					`The temperature is currently ${response.data.weather} degrees celsius`
 				);
 
 				if (response.data.length === 0) {
