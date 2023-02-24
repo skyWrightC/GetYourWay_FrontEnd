@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, MarkerF, PolylineF } from "@react-google-maps/api";
 import "./TLOU.css";
 import { Button, CardActions } from "@mui/material";
 import axios from "axios";
@@ -11,12 +11,28 @@ function TLOU() {
 	const { isLoaded } = useLoadScript({
 		googleMapsApiKey: "",
 	});
-	const ed = useMemo(() => ({ lat: 53.5461, lng: 113.4937 }), []);
-	const cal = useMemo(() => ({ lat: 50.1172, lng: 114.0719 }), []);
-	const can = useMemo(() => ({ lat: 51.0899, lng: 115.3441 }), []);
+	const ed = useMemo(() => ({ lat: 53.5461, lng: -113.4937 }), []);
+	const cal = useMemo(() => ({ lat: 50.1172, lng: -114.0719 }), []);
+	const can = useMemo(() => ({ lat: 51.0899, lng: -115.3441 }), []);
 
 	const [flightDuration, setFlightDuration] = useState("");
 	const [weatherResponse, setWeatherResponse] = useState();
+
+	const edmontonPlanCoordinates = [
+		{ lat: 53.5461, lng: -113.4937 },
+		{ lat: 51.1215, lng: -114.0076 },
+		{ lat: 51.4700, lng: -0.4543 }
+	];
+  const calgaryPlanCoordinates = [
+		{ lat: 50.1172, lng: -114.0719 },
+		{ lat: 51.1215, lng: -114.0076 },
+		{ lat: 51.4700, lng: -0.4543 }
+	];
+  const canmorePlanCoordinates = [
+		{ lat: 51.0899, lng: -115.3441},
+		{ lat: 51.1215, lng: -114.0076 },
+		{ lat: 51.4700, lng: -0.4543 }
+	];
 
 	let weatherUrl = "";
 
@@ -112,6 +128,7 @@ function TLOU() {
 				<div className="columns">
 					<div className="column">
 						<h2>Edmonton, Canada</h2>
+						<br/>
 						<div className="edmontoncontainer">
 							<br />
 							<GoogleMap
@@ -119,17 +136,23 @@ function TLOU() {
 								center={ed}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat: 51.487, lng: -0.327 }} />
 								<MarkerF position={ed} />
+								<PolylineF
+									path={edmontonPlanCoordinates}
+									strokeColor="#FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 							</GoogleMap>
 							<article className="edmonton-article">
-								Dubrovnik is a city in southern Dalmatia, Croatia, by the
-								Adriatic Sea. It was historically known as Ragusa (pronounced
-								[raˈɡuza]; see notes on naming). It is one of the most prominent
-								tourist destinations in the Mediterranean, a seaport and the
-								centre of the Dubrovnik-Neretva County. Its total population is
-								42,615 (2011 census). In 1979, the city of Dubrovnik was added
-								to the UNESCO list of World Heritage Sites in recognition of its
-								outstanding medieval architecture and fortified
+							Another city in Alberta where filming took place was Edmonton.
+							The skyline of this western Canadian city stands out from the <span class="bolded"> vast
+							wilderness and natural areas surrounding it.</span> It’s the perfect backdrop
+							for a series that highlights the major cities in the United States,
+							deserted by humans, where nature has once again taken over. Downtown
+							Edmonton and the Legislative Assembly of Alberta building both appear
+							on screen in The Last of Us.
 								<div>
 									<CardActions>
 										<Button
@@ -138,7 +161,7 @@ function TLOU() {
 											color="primary"
 											onClick={() => handleSearch("visitA")}
 										>
-											Visit The This Location
+											Visit This Location!
 										</Button>
 									</CardActions>
 								</div>
@@ -149,7 +172,7 @@ function TLOU() {
 					</div>
 					<div className="column">
 						<h2>Calgary, Canada</h2>
-						<br />
+						
 						<div className="calgarycontainer">
 							<br />
 							<GoogleMap
@@ -157,18 +180,21 @@ function TLOU() {
 								center={cal}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat: 51.487, lng: -0.327 }} />
 								<MarkerF position={cal} />
+								<PolylineF
+									path={calgaryPlanCoordinates}
+									strokeColor="#FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 							</GoogleMap>
 							<article className="calgary-article">
-								At the edge of Kings Landing, there is a large body of water
-								called Blackwater Bay. It houses Driftmark, a castle and home to
-								House Velaryon. It previously featured in Game of Thrones during
-								the Battle of the Blackwater. Lord Corlys Velaryon, also known
-								as the Sea Snake, is a key character in House of the Dragon,
-								sitting on the small council as Master of Ships. In reality,
-								Driftmark is a medieval church dating back to the 12th century
-								on St. Michael’s Mount, a rocky island housing a small community
-								off the coast of Cornwall, linked to Marazion island by a tidal
+							The province of Alberta is also home to the city of Calgary, which inspired the show’s production team.
+							Calgary’s city centre was one of the settings for The Last of Us, where the crew filmed at <span class="bolded"> Mount Royal
+							University, the Southern Alberta Institute of Technology and the Northland Village Mall. </span> Viewers will
+							also recognise the city’s courthouse. Several neighbourhoods were transformed and used for filming as well,
+							including the Beltline district, home to Stampede Park, and the Victoria Park district.
 								causeway.
 								<div>
 									<CardActions>
@@ -178,7 +204,7 @@ function TLOU() {
 											color="primary"
 											onClick={() => handleSearch("visitB")}
 										>
-											Visit The This Location
+											Visit This Location!
 										</Button>
 									</CardActions>
 								</div>
@@ -194,17 +220,20 @@ function TLOU() {
 								center={can}
 								mapContainerClassName="map-container"
 							>
+								<MarkerF position={{ lat: 51.487, lng: -0.327 }} />
 								<MarkerF position={can} />
+								<PolylineF
+									path={canmorePlanCoordinates}
+									strokeColor="#FF0000"
+									strokeOpacity={1.0}
+									strokeWeight={2}
+								/>
 							</GoogleMap>
 							<article className="canmore-article">
-								HBO returned to Cáceres in Spain to film scenes for House of The
-								Dragon, after the filming location was previously used in Game
-								of Thrones it stood in for the Lannister stronghold, King's
-								Landing, in season 7. The scenes in the streets of King's
-								Landing from episodes eight and nine, "The Lord of the Tides"
-								and "The Green Council", were filmed in Cáceres. The Dragonpit
-								exterior was filmed at St. George's Square, removing San
-								Francisco Javier church digitally.
+							Just west of Calgary is Canmore, a town that was used to portray Jackson, Wyoming.
+							<span class="bolded">The snowy mountains of Waterton Lakes National Park were used for hiking sequences
+							in Colorado.</span> Other pivotal scenes in the show were filmed in Calgary’s Northland Village Mall,
+							Mount Royal University, and Southern Alberta Institute of Technology, Decider reports.
 								<div>
 									<CardActions>
 										<Button
@@ -213,7 +242,7 @@ function TLOU() {
 											color="primary"
 											onClick={() => handleSearch("visitC")}
 										>
-											Visit The This Location
+											Visit The This Location!
 										</Button>
 									</CardActions>
 								</div>
